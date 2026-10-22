@@ -1,7 +1,11 @@
+
 import { Request, Response } from 'express';
 
 export class LoanController {
-  public static createLoan = (req: Request, res: Response): void => {
+  public static createLoan = (
+    req: Request,
+    res: Response
+  ): void => {
     const loanData = req.body;
     void loanData;
 
@@ -11,7 +15,10 @@ export class LoanController {
     });
   };
 
-  public static getLoansByFilter = (req: Request, res: Response): void => {
+  public static getLoansByFilter = (
+    req: Request,
+    res: Response
+  ): void => {
     const filters = req.query;
     void filters;
 
@@ -21,7 +28,10 @@ export class LoanController {
     });
   };
 
-  public static getLoanById = (req: Request, res: Response): void => {
+  public static getLoanById = (
+    req: Request,
+    res: Response
+  ): void => {
     const { id } = req.params;
 
     res.status(501).json({
@@ -30,7 +40,10 @@ export class LoanController {
     });
   };
 
-  public static acceptLoanInventory = (req: Request, res: Response): void => {
+  public static acceptLoanInventory = (
+    req: Request,
+    res: Response
+  ): void => {
     const { id } = req.params;
 
     res.status(501).json({
